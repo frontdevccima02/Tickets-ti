@@ -1,0 +1,69 @@
+<?php
+require_once("../../config/conexion.php");
+
+
+$usuario = $_SESSION['username'];
+require_once './../../../php/connect.php';
+$consul = "SELECT * FROM `usuarios` WHERE usuario = '$usuario'";
+$query = mysqli_query($conexion,$consul);
+$mostrar=mysqli_fetch_row($query);
+?>
+
+<!DOCTYPE html>
+<html>
+    <?php require_once("../MainHead/head.php");?>
+    <title>Panel</title>
+</head>
+
+<?php
+
+switch($mostrar[1]){
+	case 'Yaressi Rodriguez':
+		case 'Jimena Alarcon':
+			case 'Jose Renovato':
+				case 'Juan Pablo':
+					case 'Jackelin Yañez':
+						case 'Isai Garcia':
+		?>
+		<body class="with-side-menu">
+		<?php
+		require_once("../MainHeader/header.php");
+		?>
+			<div class="mobile-menu-left-overlay"></div>
+		<?php
+			require_once("../MainNav/nav.php");
+		?>
+		<div class="page-content">
+		<div class="container-fluid">
+			<?php
+			require_once("./../../config/principalcharts.php");
+			?>
+		</div>
+	</div>
+
+</body>
+	<?php
+        break;
+	
+	default:
+	?>
+					<body>
+					<?php
+					require_once("../MainHeader/header.php");
+					?>
+					<div class="page-content">
+					<div class="container-fluid">
+						<?php
+						require_once("./ticketsusu.php");
+						?>
+					</div>
+				</div>
+
+</body>
+<?php
+		break;
+}
+?>	<!-- Contenido -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
