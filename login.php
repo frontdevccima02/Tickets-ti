@@ -6,121 +6,187 @@ require_once './php/connect.php';
 $consul = "SELECT * FROM `usuarios` WHERE usuario = '$usuario'";
 $query = mysqli_query($conexion,$consul);
 $mostrar=mysqli_fetch_row($query);
-
-
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>CcimaIT!</title>
-    <link rel="stylesheet" href="./css/st.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <a href="#"><p class="logo">CcimaIT!</p></a>  
-        <nav>
-        <a href="#somos">Quienes Somos</a>
-          <a href="#nuestros-ser">Nuestros Servicios</a>
-          <a href="#aplica-ya">Mantenimiento</a>
-          <a href = 'php/cerrar_sesion.php'>
-            out
-        </a>
+<html lang="es">
 
-          <a href="#">
-            <?php
-            if(!isset($usuario)){
-              header("location: login.php");
-            }else{
-              echo "$usuario";
-            
-              echo "";
-            }
-            ?>
-          </a>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCIMAIT | HOME </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/fcdf70aeb7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/icons/logo-icon.ico">
+</head>
+<body>
+  <header>
+    <!-- navegacion -->
+    <nav class="navbar navbar-expand-sm bg-pri fixed-top">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fs-3 text-white fw-bold" href="#">CCIMAIT</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-white fw-bold" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-white" href="#">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-white" href="#">Servicios</a>
+          </li>
+          <li class="nav-item dropdown">
+            <!-- Boton de usuario -->
+            <a class="nav-link fw-bold text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <?php
+              if(!isset($usuario)){
+                header("location: login.php");
+              }else{
+                echo "$usuario";             
+                echo "";
+              }
+            ?></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href='php/cerrar_sesion.php'>Salir</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </header>
-    <section id="hero">
-      <h1>
-        Resolvemos tus problemas <br />
-        de Informatica.
-      </h1>
-    </section>
-    <section id="somos">
-      <div class="container">
-        <div class="img-container"></div>
-        <div class="texto">
-        <h2>Somos <span class="colora">Ccima IT!</span></h2>
-        <p>
-          Somos un area encargada de resolver los problemas relacionados con
-          problemas informaticos, tales como conexiones LAN, configuracion de servidores,
-          desarrollo de sorftware especializado, mantenimiento preventivo y correctivo a equipo de computo,
-          mantenimeinto de actualizacion, instalacion de software.
-        </p>
+    </nav>
+    <!-- fin de Navegacion -->
+  </header>
+  <!-- hero -->
+  <section id="header" class="bg-pri">
+    <div class="container">
+      <div class="row justify-content-between align-content-center h100">
+        <div class="col-12 col-md-5 text-white">
+          <!-- contenedor -->
+          <h1 class="text-white fs-2">Resolvemos tus problemas de Informatica. </h1>
+          <hr class="border border-white">
+          <span class="fs-5"> Estas listo para Empezar</span>
+          <div class="mt-5">
+            <p class="fs-5 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus necessitatibus
+              omnis </p>
+            <div class="d-flex flex-column">
+              <div class="">
+                <?php
+                      $ruta1="./tickets/view/Home/index.php";
+                  ?>
+                <a class="btn btn-primary w250px bg-trasparent text-shadow mt-3 px-5 fw-bold"
+                  href="<?php echo $ruta1; ?>">Nuevo Ticket</a>
+              </div>
+              <div class="mt-3">
+                <?php
+                if ($mostrar[6] == 'TI') {
+                  $ruta = "./calendario/index.php";
+                } else {
+                  $ruta = "./calendariousu/index.php";
+                }
+              ?>
+                <a class="btn btn-secondary w250px text-shadow text-black mt-3 px-5 fw-bold"
+                  href="<?php echo $ruta; ?>">Mantenimiento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- imagen -->
+        <div class="col-12 col-md-5">
+          <img class="w100" src="img/content/Image-Hero.png" alt="">
+        </div>
+      </div>
     </div>
+  </section>
+  <!--Fin Hero -->
+  <!--Nosotros -->
+  <section>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-md-6">
+          <h3 class="text-primary my-5">Provide Tools and Expertise to Effectively Manage Cloud Environments</h3>
+        </div>
       </div>
-    </section>
-    <section id="nuestros-ser">
-      <div class="container">
-        <h2>Nuestros Servicios</h2>
-        <div class="programas">
-        <div class="carta">
-          <h3>Soporte</h3>
-          <p>
-            Agenda tu cita para realizar el mantenimiento a tu equipo de computo.
-          </p>
-            <?php
-                  $ruta1="./tickets/view/Home/index.php";
-            ?>
-          <a href=" <?php echo $ruta1; ?> "> <button>+ Info</button> </a>
+      <div class="row my-5">
+        <div class="col-12 col-md-6">
+          <img class="w90" src="img/content/gestion.jpg" alt="">
         </div>
-        <div class="carta">
-          <h3>Desarrollo</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis obcaecati fuga molestiae nesciunt nisi consequatur ea
-            officiis eius nihil repellat optio nostrum, aut impedit earum,
-            laudantium, omnis delectus ex aperiam!
-          </p>
-          <button>+ Info</button>
+        <div class="col-12 col-md-6 border-ti d-flex flex-column justify-content-center">
+          <p class="text-start ms-3">Somos un area encargada de resolver los problemas relacionados con problemas
+            informaticos, tales como
+            conexiones LAN, configuracion de servidores, desarrollo de sorftware especializado, mantenimiento preventivo
+            y correctivo a equipo de computo, mantenimeinto de actualizacion, instalacion de software</p>
         </div>
-        <div class="carta">
-          <h3>Infraestructura</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis obcaecati fuga molestiae nesciunt nisi consequatur ea
-            officiis eius nihil repellat optio nostrum, aut impedit earum,
-            laudantium, omnis delectus ex aperiam!
-          </p>
-          <button>+ Info</button>
-        </div>
+      </div>
     </div>
-      </div>
-    </section>
-    <section id="aplica-ya">
-        <h2>Agenda tu mantenimiento</h2>
-
-      <?php
-      if ($mostrar[6] == 'TI') {
-        $ruta = "./calendario/index.php";
-      } else {
-        $ruta = "./calendariousu/index.php";
-      }
-      ?>
-       <a href=" <?php echo $ruta; ?> "> <button>AGENDA</button> </a>
-
-
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; Jose Reno, &copy; Juan Lira 2022</p>
+  </section>
+  <!--Fin de Nosotros -->
+  <!--Servicios -->
+  <section id="servicios" class="bg-pri py-5">
+    <div class="container ">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-md-6">
+          <h3 class="text-white my-5 ">Provide Tools and Expertise to Effectively Manage Cloud Environments</h3>
         </div>
-    </footer>
-  </body>
-    </footer>
-  </body>
+      </div>
+      <div class="row justify-content-evenly ">
+        <div class="col-12 col-md-2 service">
+          <img class="w100 px-5 pt-5" src="img/content/seguridad.png" alt="">
+          <h3 class="text-white text-center my-3"> Soporte</h3>
+        </div>
+        <div class="col-12 col-md-2 service">
+          <img class="w100 px-5 pt-5" src="img/content/servidor.png" alt="">
+          <h3 class="text-white text-center my-3"> Desarollo</h3>
+        </div>
+        <div class="col-12 col-md-2 service">
+          <img class="w100 px-5 pt-5" src="img/content/Velocidad.png" alt="">
+          <h3 class="text-white text-center my-3">Infraestructura</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Nosotros -->
+  <section>
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-md-6">
+          <h3 class="text-primary my-5">Provide Tools and Expertise to Effectively Manage Cloud Environments</h3>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+          <p class="text-end ms-3 px-3">Somos un area encargada de resolver los problemas relacionados con problemas
+            informaticos, tales como
+            conexiones LAN, configuracion de servidores, desarrollo de sorftware especializado, mantenimiento preventivo
+            y correctivo a equipo de computo, mantenimeinto de actualizacion, instalacion de software</p>
+        </div>
+        <div class="col-12 col-md-6 border-ti text-end">
+          <img class="w90" src="img/content/gestion.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Fin de Nosotros -->
+  <!-- footer -->
+  <footer class="bg-pri">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 my-3">
+          <h6 class="text-white text-uppercase text-center">todos los derechos reservados <a
+              class="text-decoration-none text-white" target="_blank" href="https://grupoccima.com"> grupoccima.com</a>
+            </H3>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>
-
