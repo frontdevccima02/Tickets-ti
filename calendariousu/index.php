@@ -196,20 +196,13 @@ $mostrar=mysqli_fetch_row($query);
               <tr class="">
                 <td>Nombre:</td>
                 <td><div class="mb-3">
-                  <input type="text"
-                    class="form-control" name="" id="txtTitulo" aria-describedby="helpId" disabled value="
-                    <?php echo $usuario;?>
-                    " >
+                  <input type="text" class="form-control" name="" id="txtTitulo" aria-describedby="helpId" disabled value="<?php echo $usuario;?>">
                 </div></td>
               </tr>
               <tr class="">
                 <td>Area:</td>
                 <td>
-                <input type="text"
-                    class="form-control" name="" id="txtArea" aria-describedby="helpId" disabled value="
-                    <?php
-                    echo $mostrar['0'];?>
-                    ">
+                <input type="text" class="form-control" name="" id="txtArea" aria-describedby="helpId" disabled value="<?php echo $mostrar['0'];?>">
                 </td>
               </tr>
               <tr class="">
