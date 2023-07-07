@@ -173,20 +173,13 @@ $mostrar=mysqli_fetch_row($query);
                 <td>Nombre:</td>
                 <td><div class="mb-3">
                   <input type="text"
-                    class="form-control" name="" id="txtTitulo" aria-describedby="helpId" value="
-                    <?php echo $usuario;  ?>
-                    ">
-                  
-                </div></td>
+                    class="form-control" name="" id="txtTitulo" aria-describedby="helpId" value="<?php echo $usuario;  ?>"></div></td>
               </tr>
               <tr class="">
                 <td>Area:</td>
                 <td>
                 <input type="text"
-                    class="form-control" name="" id="txtArea" aria-describedby="helpId" value="
-                    <?php
-                    echo $mostrar['0'];?>
-                    ">
+                    class="form-control" name="" id="txtArea" aria-describedby="helpId" value="<?php echo $mostrar['0'];?>">
               
                 </td>
               </tr>
