@@ -1,193 +1,84 @@
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: url("https://pbs.twimg.com/media/DDlDeqvWAAANXvo.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-*{
+* {
     box-sizing: border-box;
 }
 
-.contenedor{
+/*_-_-_-_-_-_-_-_-_-_-_-_WIDTH & HEIGTH _-_-_-_-_-_-_-_-_-_-_*/
+
+.h100 {
+    height: 100vh;
+}
+.h-100 {
+    height: 100%;
+}
+
+.w100 {
     width: 100%;
-    padding: 15px;
 }
-
-.formulario{
-    background: #fff;
-    margin-top: 150px;
-    padding: 3px;
+.w90{
+    width: 90%;
 }
-
-h1{
-    text-align: center;
-    color: #1a2537;
-    font-size: 40px;
+.w250px{
+    width: 15.6rem;
 }
+/*_-_-_-_-_-_-_-_-_-_-_-_-_ FONDOS -_-_-_-_-_-_-_-_-_-_-_-_*/
 
-input[type="text"],
-input[type="password"]{
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-}
-
-.input-contenedor{
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-
-.icon{
-    min-width: 50px;
-    text-align: center;
-    color: #999;
-}
-
-.icono{
-    color: #999;
-    cursor: pointer;
-}
-
-.op{
-    min-width: 88%;
-    text-align: center;
-    color: #999;
-}
-
-.button{
-    border: none;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    background: #1a2537;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover{
-    background: cadetblue;
-}
-
-p{
-    text-align: center;
-}
-
-.link{
-    text-decoration: none;
-    color: #1a2537;
-    font-weight: 600;
-}
-
-.link:hover{
-    color: cadetblue;
-}
-
-@media(min-width:768px){
-    .formulario{
-        margin:auto;
-        width: 500px;
-        margin-top: 150px;
-        border-radius: 2%;
-    }
-}
-
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: url("https://pbs.twimg.com/media/DDlDeqvWAAANXvo.jpg");
+.bg-img {
+    background-image: url("../img/bg/portada_login.jpg");
+    background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; 
 }
 
-*{
-    box-sizing: border-box;
+.bg-pri{
+    background-color: #07282C;
+}
+.bg-trasparent{
+    background-color: transparent;
 }
 
-.contenedor{
-    width: 100%;
-    padding: 15px;
+.bg-sec{
+    background-color: #3FDDF0;
 }
 
-.formulario{
-    background: #fff;
-    margin-top: 150px;
-    padding: 3px;
+
+
+.bg-gassdoor {
+    background-color: #ffffff38;
+    box-shadow: 3px 1px 17px #000
 }
 
-h1{
+.bg-gassdoor-fill {
+    filter: blur(2px);
+}
+
+.bg-green-trans{
+    background-color: #07282cb5;
+}
+/*_-_-_-_-_-_-_-_-_-_-_-_-_ Bordes-_-_-_-_-_-_-_-_-_-_-_-_*/
+.border-ti{
+    border-left: solid 4px #3FDDF0;
+}
+
+/*_-_-_-_-_-_-_-_-_-_-_-_-_ Fuentes-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+.text-shadow-logo {
+    text-shadow: 2px 4px 1px #3FDDF0;
+    font-size: 5rem;
+}
+.text-shadow{
+    text-shadow: 4px 4px 4px #000;
+}
+
+/*_-_-_-_-_-_-_-_-_-_-_-_-_ Sections-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+.service:hover{
+    background: linear-gradient(0deg, rgba(49,120,129,1) 0%, rgba(255,255,255,0) 54%, rgba(255,255,255,0) 100%);
+}
+.footer{
     text-align: center;
-    color: #1a2537;
-    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+    width: 83%;
+    text-shadow: 4px 4px 4px #000;
 }
-
-input[type="text"],
-input[type="password"]{
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-}
-
-.input-contenedor{
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-
-.icon{
-    min-width: 50px;
-    text-align: center;
-    color: #999;
-}
-
-.op{
-    min-width: 88%;
-    text-align: center;
-    color: #999;
-}
-
-.button{
-    border: none;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    background: #1a2537;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover{
-    background: cadetblue;
-}
-
-p{
-    text-align: center;
-}
-
-.link{
-    text-decoration: none;
-    color: #1a2537;
-    font-weight: 600;
-}
-
-.link:hover{
-    color: cadetblue;
-}
-
-@media(min-width:768px){
-    .formulario{
-        margin:auto;
-        width: 500px;
-        margin-top: 150px;
-        border-radius: 2%;
-    }
-}
-
-
 
