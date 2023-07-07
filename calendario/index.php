@@ -8,9 +8,6 @@ $consul = "SELECT area FROM `usuarios` WHERE usuario = '$usuario'";
 $query = mysqli_query($conexion,$consul);
 $mostrar=mysqli_fetch_row($query);
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,24 +23,70 @@ $mostrar=mysqli_fetch_row($query);
     <link rel="stylesheet" href="css/fullcalendar.min.css">
     <script src="js/es.js"></script>
     <link rel="stylesheet" href="../css/sti.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <title>Agenda Cima</title>
 </head>
 <body>
-
-<header>
-      <div class="container">
-        <a href="../login.php"><p class="logo">CcimaIT!</p></a>  
+<style>
+  .bg-pri{
+    background-color: #07282C;
+  }
+  .mt-100px{
+    margin-top:100px
+  }
+</style>
+    <header>
+    <header>
+ <!-- navegacion -->
+ <nav class="navbar navbar-expand-sm bg-pri fixed-top">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fs-3 text-white fw-bold" href="#">CCIMAIT</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-white fw-bold" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-white" href="#">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-white" href="#">Servicios</a>
+          </li>
+          <li class="nav-item dropdown">
+            <!-- Boton de usuario -->
+            <a class="nav-link fw-bold text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <?php
+              if(!isset($usuario)){
+                header("location: login.php");
+              }else{
+                echo "$usuario";             
+                echo "";
+              }
+            ?></a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href='php/cerrar_sesion.php'>Salir</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
+    </nav>
+    <!-- fin de Navegacion -->
+</header>
     </header>
 
-    <div class="container">
+    <div class="container mt-100px">
         
         <div class="row"> 
             <div class="col"></div>
-            <div class="col-7"><div id="calendarioweb"></div></div>
+            <div class="col-6">
+            <div class="bg-pri p-2 mb-1">
+                <h3 class="text-center text-white"> Ingresa la Fecha para el Mantenimiento</h3>
+
+              </div>  
+            <div id="calendarioweb"></div></div>
             <div class="col"></div>
         </div>
 
