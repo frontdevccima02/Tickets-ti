@@ -15,9 +15,9 @@
 
 <body class="bg-img">
     <div class="container">
-        <div class="row justify-content-between align-content-center h100">
+        <div class="row justify-content-center justify-content-md-between align-content-center h100">
             <!-- logo -texto -->
-            <div class="col-4 text-white">
+            <div class="col-12 col-md-4 text-white d-none d-md-block">
                 <h1 class="text-white text-shadow-logo">CCIMA IT</h1>
                 <hr class="border border-white">
                 <span class="fs-5"> Estas listo para Empezar</span>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <!-- Formulario-->
-            <div class="col-4 bg-gassdoor">
+            <div class="col-11 col-md-4 bg-gassdoor m-1">
                 <div class="mt-3">
                     <h3 class="text-white text-uppercase text-center pb-3">Login</h3>
                     <form  method="post" action="./php/iniciar_sesion.php" class="m-3">
