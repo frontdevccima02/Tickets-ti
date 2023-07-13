@@ -23,13 +23,24 @@
                             <label for="usuario" class="text-white form-label">Usuario:</label>
                             <input class="form-control" id="usuario" name="usuario" placeholder="Nombre de usuario">
                         </div>
+                        
                         <div class="mb-3">
                             <label for="pass" class="text-white form-label">Contraseña:</label>
-                            <input class="form-control" type="password" id="pass" name="password" placeholder="Contraseña nueva">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="password" id="pass" name="password" placeholder="Contraseña nueva">
+                                <div class="bg-light p-2 border rounded-end">
+                                    <img id="icono" class="w20px" src="img/icons/eye.svg" alt="">
+                                </div>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="pass" class="text-white form-label">Repetir Contraseña:</label>
-                            <input class="form-control" type="password"id="passn" name="passwordn" placeholder="Repite la contraseña">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="password"id="passn" name="passwordn" placeholder="Repite la contraseña">
+                                <div class="bg-light p-2 border rounded-end">
+                                    <img id="iconon" onclick="passwordVisibility('passn', 'iconon')"  class="w20px" src="img/icons/eye.svg" alt="">
+                                </div>
+                            </div>
                         </div>
                         <div class="d-flex justify-content-center pt-3">
                             <button type="submit" class="btn btn-primary bg-pri px-5">Enviar</button>
@@ -43,9 +54,7 @@
             </div>
         </div>
     </div>
-
-
+    <script src="./js/main.js"></script>
 
 </body>
-
 </html>

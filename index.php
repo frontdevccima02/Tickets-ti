@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row justify-content-center justify-content-md-between align-content-center h100">
             <!-- logo -texto -->
-            <div class="col-12 col-md-4 text-white d-none d-md-block">
+            <div class="col-12  col-md-5 col-lg-4 text-white d-none d-md-block">
                 <h1 class="text-white text-shadow-logo">CCIMA IT</h1>
                 <hr class="border border-white">
                 <span class="fs-5"> Estas listo para Empezar</span>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <!-- Formulario-->
-            <div class="col-11 col-md-4 bg-gassdoor m-1">
+            <div class="col-11 col-sm-6 col-md-5 col-lg-4 bg-gassdoor m-1">
                 <div class="mt-3">
                     <h3 class="text-white text-uppercase text-center pb-3">Login</h3>
                     <form  method="post" action="./php/iniciar_sesion.php" class="m-3">
@@ -38,7 +38,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="pass" class="text-white form-label">Contraseña:</label>
-                            <input class="form-control" type="password" id="pass" name="password" placeholder="Password">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="password" id="pass" name="password" placeholder="Password">
+                                <div class="bg-light p-2 border rounded-end">
+                                    <img id="icono" class="w20px" src="img/icons/eye.svg" alt="">
+                                </div>
+
+                            </div>
                         </div>
                         <div class="form-check mb-3 text-white">
                             <label class="form-check-label">
