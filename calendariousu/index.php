@@ -104,6 +104,7 @@ $mostrar=mysqli_fetch_row($query);
                     center: 'title',
                     right:  'month,dayGridMonth,agendaWeek,agendaDay'
             },
+                eventLimit: true,
                         Array, default: [],
             hiddenDays: [ 6, 0 ],
                         businessHours: {
