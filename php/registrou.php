@@ -65,8 +65,13 @@ require_once "./../php/connect.php";
 
                         <div class="mb-3">
                             <label for="pass" class="text-white form-label">Contraseña:</label>
-                            <input class="form-control" type="password" id="pass" name="password"
-                                placeholder="Password">
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="password" id="pass" name="password"
+                                    placeholder="Password">
+                                    <div class="bg-light p-2 border rounded-end">
+                                    <img id="icono" class="w20px" src="../img/icons/eye.svg" alt="">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="d-flex justify-content-center pt-3">
@@ -89,7 +94,7 @@ require_once "./../php/connect.php";
     </div>
 
 
-
+    <script src="./../js/main.js"></script>
 </body>
 
 </html>
