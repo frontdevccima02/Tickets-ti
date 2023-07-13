@@ -101,6 +101,7 @@ $mostrar=mysqli_fetch_row($query);
                     center: 'title',
                     right:  'month,dayGridMonth,agendaWeek,agendaDay'
             },
+                eventLimit: treu,
                         Array, default: [],
             hiddenDays: [ 6, 0 ],
             dayClick:function(date,jsEvent,view){
