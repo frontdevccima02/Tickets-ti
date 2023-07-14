@@ -24,20 +24,24 @@ $mostrar=mysqli_fetch_row($query);
 <body>
   <header>
     <!-- navegacion -->
-    <nav class="navbar navbar-expand-sm bg-pri fixed-top">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand fs-3 text-white fw-bold" href="#">CCIMAIT</a>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-white fw-bold" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-white" href="#">Quienes Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-white" href="#">Servicios</a>
-          </li>
-          <li class="nav-item dropdown">
+    <nav class="navbar navbar-expand-sm bg-pri navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-3 text-white fw-bold" href="#">CCIMA IT</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Servicios</a>
+        </li>
+        <li class="nav-item dropdown me-3">
             <!-- Boton de usuario -->
             <a class="nav-link fw-bold text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               <?php
@@ -53,16 +57,17 @@ $mostrar=mysqli_fetch_row($query);
               <li><a class="dropdown-item" href='php/cerrar_sesion.php'>Salir</a></li>
             </ul>
           </li>
-        </ul>
-      </div>
-    </nav>
+      </ul>
+    </div>
+  </div>
+</nav>
     <!-- fin de Navegacion -->
   </header>
   <!-- hero -->
   <section id="header" class="bg-pri">
     <div class="container">
       <div class="row justify-content-between align-content-center h100">
-        <div class="col-12 col-md-5 text-white">
+        <div class="col-12 col-md-5 text-white pt-5 pt-md-0">
           <!-- contenedor -->
           <h1 class="text-white fs-2">Resolvemos tus problemas de Informatica. </h1>
           <hr class="border border-white">
@@ -94,7 +99,7 @@ $mostrar=mysqli_fetch_row($query);
         </div>
         <!-- imagen -->
         <div class="col-12 col-md-5">
-          <img class="w100" src="img/content/Image-Hero.png" alt="">
+          <img class="w100 pt-5 pt-md-0" src="img/content/Image-Hero.png" alt="">
         </div>
       </div>
     </div>
@@ -113,7 +118,7 @@ $mostrar=mysqli_fetch_row($query);
           <img class="w90" src="img/content/gestion.jpg" alt="">
         </div>
         <div class="col-12 col-md-6 border-ti d-flex flex-column justify-content-center">
-          <p class="text-start ms-3">Somos un area encargada de resolver los problemas relacionados con problemas
+          <p class="text-start ms-md-3 mt-3">Somos un area encargada de resolver los problemas relacionados con problemas
             informaticos, tales como
             conexiones LAN, configuracion de servidores, desarrollo de sorftware especializado, mantenimiento preventivo
             y correctivo a equipo de computo, mantenimeinto de actualizacion, instalacion de software</p>
@@ -155,15 +160,16 @@ $mostrar=mysqli_fetch_row($query);
         </div>
       </div>
       <div class="row my-5">
-        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-          <p class="text-end ms-3 px-3">Somos un area encargada de resolver los problemas relacionados con problemas
+        <div class="col-12 col-md-6 order-md-2 border-ti text-end">
+          <img class="w90" src="img/content/gestion.jpg" alt="">
+        </div>
+        <div class="col-12 col-md-6 order-md-1 d-flex flex-column justify-content-center">
+          <p class="text-md-end  ms-md-3 px-md-3 mt-3">Somos un area encargada de resolver los problemas relacionados con problemas
             informaticos, tales como
             conexiones LAN, configuracion de servidores, desarrollo de sorftware especializado, mantenimiento preventivo
             y correctivo a equipo de computo, mantenimeinto de actualizacion, instalacion de software</p>
         </div>
-        <div class="col-12 col-md-6 border-ti text-end">
-          <img class="w90" src="img/content/gestion.jpg" alt="">
-        </div>
+
       </div>
     </div>
   </section>
