@@ -25,9 +25,8 @@ require_once "./../php/connect.php";
                 <hr class="border border-white">
                 <span class="fs-5"> Estas listo para Empezar</span>
                 <div class="mt-5">
-                    <p class="fs-5 text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-                        necessitatibus omnis </p>
-                    <a class="btn btn-primary bg-trasparent text-shadow mt-3 px-5 fw-bold" href="">Soporte Tecnico</a>
+                    <p class="fs-5 text-start">para Agendar el Mantenimiento de tu Equipo, solo necesitas seleccionar la fecha en que te gustaria.</p>
+                    <a class="btn btn-primary bg-trasparent text-shadow mt-3 px-5 fw-bold d-none" href="../calendariousu/index.php">Soporte Tecnico</a>
                 </div>
             </div>
             <div class="col-4 bg-gassdoor">
