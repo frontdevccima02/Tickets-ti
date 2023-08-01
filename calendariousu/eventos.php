@@ -9,7 +9,8 @@ $usuario = $_SESSION['username'];
  
 
    header('Content-Type: application/json');
-   $pdo=new PDO("mysql:host=localhost;dbname=bbbme11_sistema","bbbme11_ti","Gccima22.");
+   // $pdo=new PDO("mysql:host=localhost;dbname=bbbme11_sistema","bbbme11_ti","Gccima22.");
+   $pdo=new PDO("mysql:host=localhost;dbname=sistema","root","");
 
    $accion= (isset($_GET['accion']))?$_GET['accion']:'leer';
 
