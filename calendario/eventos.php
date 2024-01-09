@@ -1,26 +1,11 @@
 <?php
    header('Content-Type: application/json');
-   // $pdo=new PDO("mysql:host=localhost;dbname=bbbme11_sistema","bbbme11_ti","Gccima22.");
-   $pdo=new PDO("mysql:host=localhost;dbname=sistema","root","");
+   $pdo=new PDO("mysql:host=localhost;dbname=bbbme11_sistema","bbbme11_ti","Gccima22.");
+
    $accion= (isset($_GET['accion']))?$_GET['accion']:'leer';
 
    switch($accion){
       case 'agregar':
-         $limiteEventosPorDia = 2; // Cambia este valor según el límite deseado
-
-         // Obtener la fecha del evento para contar la cantidad de eventos en ese día
-         $fechaEvento = date('Y-m-d', strtotime($_POST['start']));
- 
-         // Contar la cantidad de eventos para el día seleccionado
-         $sentenciaCount = $pdo->prepare("SELECT COUNT(*) as count FROM eventos WHERE DATE(start) = :fechaEvento");
-         $sentenciaCount->execute(array('fechaEvento' => $fechaEvento));
-         $resultCount = $sentenciaCount->fetch(PDO::FETCH_ASSOC);
-         $cantidadEventos = intval($resultCount['count']);
-         if ($cantidadEventos >= $limiteEventosPorDia) {
-            echo json_encode(array('error' => 'Se ha alcanzado el límite de eventos por día.'));
-         } else {
-            
-
          $sentenciaSQL= $pdo->prepare("INSERT INTO eventos (title,descripcion,color,textColor,start,end,depto) 
          VALUES (:title,:descripcion,:color,:textColor,:start,:end,:area)");
 
@@ -39,9 +24,6 @@
 
 
              echo json_encode($respuesta);
-         }
-         
-
          
          break;
       case 'eliminar':
